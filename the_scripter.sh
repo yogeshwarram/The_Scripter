@@ -1,9 +1,43 @@
 #!/bin/bash
 
-figlet The Scripter
+RED="\e[31m"
+ORANGE="\e[33m"
+BLUE="\e[94m"
+GREEN="\e[92m"
+STOP="\e[0m"
 
-echo ''
 
+
+
+printf "${RED}"
+figlet -f big -w 100 The Scripter
+
+printf "${ORANGE}"
+echo '
+                 \\\///
+                / _  _ \
+              (| (.)(.) |)
+.-----------.OOOo--()--oOOO.----------.
+|                                     |
+|    Created by Team :- VIEH GROUP    |
+| ----------------------------------- |
+|    Visit us :- www.viehgroup.com    |
+| ----------------------------------- |
+|    Kshitiz Raj (@manitorpotterk)    |
+|    Yogeshwarram Godara (@0xyogi)    |
+|  Rahul Singh Bisht (@merahulbisht1) |
+|   Vishal Jain (@VishalJ00719700)    |
+| ----------------------------------- |
+|                                     |
+|                                     |
+'----------.oooO----------------------'
+            (   )   Oooo.
+             \ (    (   )
+              \_)    ) /
+                    (_/
+'
+
+printf "${GREEN}"
 echo 'Select the Script you want to create and run'
 echo ''
 echo ''
@@ -14,11 +48,13 @@ echo '4.Payload Generator'
 echo '5.Webserver'
 echo '6.Recon'
 echo '7.Password Generator'
-echo '8.Active Directory Enumerator'
+echo '8.Juice'
 echo '9.Cron Job Adder'
 echo '10.SSH Key Adder'
+printf "${STOP}"
 echo ''
 echo 'Enter the Option :'
+printf "${STOP}"
 read option
 
 if [[ $option == 1 ]]
@@ -46,7 +82,7 @@ then
 	bash scripts/Password_Genrator.sh
 elif [[ $option == 8 ]]
 then
-	echo 'wait updating'
+	bash scripts/juice.sh
 elif [[ $option == 9 ]]
 then
 	bash scripts/add_cronjob.sh
